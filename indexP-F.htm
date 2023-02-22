@@ -1,0 +1,350 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<title>TOGAF Game</title>
+<style>
+body {
+	font-family: "Helvetica Neue", HelveticaNeue, Helvetica, sans-serif;
+	font-size:90%;
+	background: #D5F7B3;
+}
+a:link {text-decoration:none;color:#0000FF;}
+a:active {text-decoration:none;color:#0000FF;}
+a:visited {text-decoration:none;color:#0000FF;}
+a:hover {text-decoration:underline;color:#0000FF;}
+li {list-style-type:none; border:solid 1px gray;margin:3px 4px 4px -10px;padding:4px; font-size:11px;cursor:move; background:#E7E7E7;}
+li:hover { background:#FFF; }
+ul {padding-left:1em;margin-left:0em;}
+li span {font-weight:bold;font-size:105%;}
+.unmovable {list-style-type:none;font-size:1px;padding:0px;margin:0px;border:none;}
+div {
+	float:left;
+	background: #DCDCDC;
+	margin-right:5px;
+	width:130px;
+	border:1px solid #333;
+	margin-bottom:20px;
+}
+.containerTitle { 
+display:block;
+font-size:16px;
+font-weight:bold;
+padding:7px 5px;
+text-align:center;
+}
+#mixed {
+	background: #CCC;
+	width:170px;
+	margin-right:30px;
+}
+small { 
+background:wheat none repeat scroll 0 0;
+border:1px solid gray;
+display:block;
+font-size:13px;
+margin:7px 0;
+padding:6px;
+}
+#newVersion
+{
+	background:lightGreen none repeat scroll 0 0;
+	border:1px solid green;
+	color:green;
+	display:block;
+	font-weight:bold;
+	margin-bottom:7px;
+	margin-top:-14px;
+	padding:8px 0;
+	text-align:center;
+	width:100%;
+}
+#hide {
+border-right:1px dotted;
+display:block;
+float:left;
+font-size:14px;
+height:19px;
+margin-right:7px;
+padding-right:5px;
+padding-top:0;
+}
+h1 { font-size:20px;
+margin-bottom:-2px; }
+h1 span {
+	font-size:10px;
+}
+</style>
+<script type="text/javascript" src="js/jquery-1.2.1.js"></script>
+<script type="text/javascript" src="js/ui.sortable.js"></script>
+</head>
+<body>
+<h1 align="center">&nbsp;&nbsp;TOGAF 9.2 Game - Steps:Preliminary to Phase F <sup style="font-size:8px;"> v1.0</sup><br /><span>( Based on Rita's Process Game by aamirafridi.com at https://pmpritagame.github.io/ , updated by Khoa Pham )</span></h1>
+<h1 align="center"><a href="index-objectives.htm">Objectives</a> | <a href="indexP-F.htm">Preliminary to F</a> | <a href="indexE-R.htm">E to Requirement Management</a></h1>
+<hr />
+<small><a id="hide" href="#">Hide</a><strong>How to play?</strong> Just drag any item from 'mixed' list and drop it just under its appropriate heading. After you finish, go and check ur result.
+</small>
+&raquo; <a href="indexP-F.htm" id="new">Start new game</a> &raquo;
+<a href="#" id="shu">Shuffle the 'Mixed' list</a> &raquo; 
+<a href="#" id="phaseBDAT">PhaseBDAT Order</a> <span>&raquo;</span> 
+<a href="#" id="result">Show results</a>
+<hr />
+<ul id="masterList">
+		<div id="mixed">
+			<span class="containerTitle">Mixed</span>
+			<ul id="0">
+
+				<li id="1" value="101">Scope the Enterprise Organizations Impacted</li>
+				<li id="1" value="102">Confirm Governance and Support Frameworks</li>
+				<li id="1" value="103">Define and Establish Enterprise Architecture Team and Organization</li>
+				<li id="1" value="104">Identify and Establish Architecture Principles</li>
+				<li id="1" value="105">Tailor the TOGAF Framework and, if any, Other Selected Architecture Framework(s)</li>
+				<li id="1" value="106">Develop a Strategy and Implementation Plan for Tools and Techniques</li>
+
+<li id="2" value="201">Establish the Architecture Project</li>
+<li id="2" value="202">Identify Stakeholders, Concerns, and Business Requirements</li>
+<li id="2" value="203">Confirm and Elaborate Business Goals, Business Drivers, and Constraints</li>
+<li id="2" value="204">Evaluate Capabilities</li>
+<li id="2" value="205">Assess Readiness for Business Transformation</li>
+<li id="2" value="206">Define Scope</li>
+<li id="2" value="207">Confirm and Elaborate Architecture Principles, including Business Principles</li>
+<li id="2" value="208">Develop Architecture Vision</li>
+<li id="2" value="209">Define the Target Architecture Value Propositions and KPIs</li>
+<li id="2" value="210">Identify the Business Transformation Risks and Mitigation Activities</li>
+<li id="2" value="211">Develop Statement of Architecture Work; Secure Approval</li>
+
+
+<li id="3" value="301">Select Reference Models, Viewpoints, and Tools</li>
+<li id="3" value="302">Develop BDAT Architecture Description</li>
+<li id="3" value="303">Develop Target Business Architecture Description</li>
+<li id="3" value="304">Perform Gap Analysis</li>
+<li id="3" value="305">Define Candidate Roadmap Components</li>
+<li id="3" value="306">Resolve Impacts Across the Architecture Landscape</li>
+<li id="3" value="307">Conduct Formal Stakeholder Review</li>
+<li id="3" value="308">Finalize the BDAT Architecture</li>
+<li id="3" value="309">Create the Architecture Definition Document</li>
+
+
+				<li id="4" value="401">Determine/Confirm Key Corporate Change Attributes</li>
+				<li id="4" value="402">Determine Business Constraints for Implementation</li>
+				<li id="4" value="403">Review and Consolidate Gap Analysis Results from Phases B to D</li>
+				<li id="4" value="404">Review Consolidated Requirements Across Related Business Functions</li>
+				<li id="4" value="405">Consolidate and Reconcile Interoperability Requirements</li>
+				<li id="4" value="406">Refine and Validate Dependencies</li>
+				<li id="4" value="407">Confirm Readiness and Risk for Business Transformation</li>
+				<li id="4" value="408">Formulate Implementation and Migration Strategy</li>
+				<li id="4" value="409">Identify and Group Major Work Packages</li>
+				<li id="4" value="410">Identify Transition Architectures</li>
+				<li id="4" value="411">Create the Architecture Roadmap & Implementation and Migration Plan</li>
+				
+
+<li id="5" value="501">Confirm Management Framework Interactions for the Implementation and Migration Plan</li>
+<li id="5" value="502">Assign a Business Value to Each Work Package</li>
+<li id="5" value="503">Estimate Resource Requirements, Project Timings, and Availability/Delivery Vehicle</li>
+<li id="5" value="504">Prioritize the migration projects through the conduct of a cost/benefit assessment and risk validation</li>
+<li id="5" value="505">Confirm Architecture Roadmap and Update Architecture Definition Document</li>
+<li id="5" value="506">Complete the Implementation and Migration Plan</li>
+<li id="5" value="507">Complete the Architecture Development Cycle and Document Lessons Learned</li>
+
+				
+			</ul>
+		</div>
+	
+		<div class="pane">
+			<span class="containerTitle">Preliminary</span>
+			<ul id="1" class="planning">
+				<li class="unmovable"></li>
+			</ul>
+		</div>
+	
+		<div class="pane">
+			<span class="containerTitle">A - Architecture Vision</span>
+			<ul id="2" class="phaseA">
+				<li class="unmovable"></li>
+			</ul>
+		</div>
+	
+		<div class="pane">
+			<span class="containerTitle">B,C,D - BDAT</span>
+			<ul id="3" class="phaseBDAT">
+				<li class="unmovable"></li>
+			</ul>
+		</div>	
+	
+		<div style="width:230px" class="pane">
+			<span class="containerTitle">E - Opportunities and Solutions</span>
+			<ul id="4">
+				<li class="unmovable"></li>
+			</ul>
+		</div>
+	
+		<div class="pane">
+			<span class="containerTitle">F - Migration Planning</span>
+			<ul id="5">
+				<li class="unmovable"></li>
+			</ul>
+		</div>
+	</li>
+</ul>
+
+<script type="text/javascript">
+	//Shuffle the list
+	$('#0').shuffle();
+	$('#shu').click(function(){ 
+		$('#0').shuffle();
+		$("#masterList").sortable({ items: "li", handle:'.containerTitle', opacity: 0.6, helper: 'clone', forcePlaceholderSize: true,forceHelperSize: true});
+		return false;
+	});
+	
+
+///////////////////////////////////////
+//Planning processes ordering test
+	$('#phaseBDAT').click(function(){
+		//first trigger new game
+		$('#new').trigger('click').replaceWith("<a href='indexP-F.htm'>Start new game</a>");
+		$('#result').replaceWith("<a href='#' id='seq' style='color:#C60'>Show sequence errors and hints to fix them</a>");
+		$('#shu').replaceWith("<a href='#' id='shuPla'>Shuffle the 'Planning' list</a>");
+		
+		$('#shuPla').click(function(){ 
+			$('.phaseBDAT').shuffle();
+			$(".phaseBDAT").sortable({ items: "li", handle:'.containerTitle', opacity: 0.6, helper: 'clone', forcePlaceholderSize: true,forceHelperSize: true});
+			return false;
+		});
+		
+		//Show sequence of planning items
+		$('#seq').click(function(){
+			$('.unmovable').remove();
+			
+			i=201;
+			n=1;
+			
+			$('.pane ul').find('li').each(function(){
+				$(this).attr('rel',i);
+				i++;
+			});
+			
+			$('.pane ul').find('li').each(function(){
+				if(parseInt($(this).attr('rel'))!=parseInt($(this).attr('value')))
+				{
+					var updown='';
+					if(parseInt($(this).attr('rel'))>parseInt($(this).attr('value')))
+						updown=parseInt($(this).attr('rel'))-parseInt($(this).attr('value'))+" steps &uarr;"; 
+					else
+						updown=parseInt($(this).attr('value'))-parseInt($(this).attr('rel'))+" steps &darr;";
+					
+					$(this).find('.bullet').remove();
+					$(this).html("<span class=bullet>"+updown+" - </span>"+ $(this).html()).css('background','#C60');
+				}
+				else
+				{
+					$(this).find('.bullet').remove();
+					$(this).html("<span class=bullet>"+n+" - </span>"+ $(this).html()).css('background','#E7E7E7');
+				}
+				n++;
+			});
+			
+		  return false;
+		});
+		
+		//From everything from mixed but leave planning
+		$('#0').find('li').each(function(){
+			if($(this).attr('id')!='2') $(this).remove();//remove all others
+		});
+		
+		//shift planning list from mixed to planning
+		$('.phaseBDAT').append($('#0').html());
+		//Shuffle planning list
+		$('.phaseBDAT').shuffle().parent().css({"width":"500px", "margin":"0 auto","position":"absolute","left":"32%"});
+		$(".phaseBDAT").sortable({ items: "li", handle:'.containerTitle', opacity: 0.6, helper: 'clone', forcePlaceholderSize: true,forceHelperSize: true});
+		
+		//Remove all other panels and just leave the planning panel for eazy sorting
+		$('#masterList').find('ul').each(function(){
+			if(!$(this).hasClass('phaseBDAT')) $(this).parent().remove();
+		});
+		return false;
+	});
+	
+///////////////////////////////////////
+	
+	$('#new').click(function(){
+		if(!confirm('Are you sure you want to start a new game?')) return false;
+		var list='';
+		$('.pane').each(function(){
+			list+=$(this).find('ul').html();
+			$(this).find('ul').html("<li class='unmovable'></li>");
+		});
+		$('#0').append(list).shuffle();
+		$('#0').find('.correct').each(function(){
+			$(this).parent().css('background','#E7E7E7');
+			$(this).remove();
+		});
+		$('#r').remove();
+		$("#masterList").sortable({ items: "li", handle:'.containerTitle', opacity: 0.6, helper: 'clone', forcePlaceholderSize: true,forceHelperSize: true});
+		return false;
+	});
+	
+	//Make all <li> items in the list sortable using the jQuery UI Sortables code
+	$("#masterList").sortable({ items: "li", handle:'.containerTitle', opacity: 0.6, helper: 'clone', forcePlaceholderSize: true,forceHelperSize: true});
+	$(".containerTitle").mousedown(function(){ alert('You cannot move main heading!'); });
+	$('#hide,#hide1').click(function(){ $(this).parent().slideUp('slow');return false; });
+	
+	$('#result').click(
+		function()
+		{
+			if($('#0').find('li').length==79)
+			{
+				alert('No results found.');
+				return false;
+				//if (!confirm('Are you sure you want to check the results\nbefore you complete the game?')) return false;
+			}
+			
+			var wrong=0;
+			var total=0;
+			$("#masterList").find('li').each(function(){
+				//Check the result
+				if($(this).attr('id')!=$(this).parent().attr('id') && $(this).parent().attr('id')!='0' && $(this).attr('class')!='unmovable')
+				{
+					$(this).css("background","#FF7774");
+					wrong+=1;
+					var correctHeading='';
+					var currentId=$(this).attr('id');
+					$("#masterList").find('ul').each(function(){
+						if($(this).attr('id')==currentId)
+							correctHeading=$(this).parent().find('.containerTitle').html();
+					});
+					$(this).find('.correct').remove();
+					$(this).append("<span class='correct' style='display:block;padding-top:3px;margin-top:3px;border-top: 1px dotted #ff0000;'><strong>Should be under:<br> \""+ correctHeading +"\"</strong></span>");
+				}
+				
+				//attmpted
+				if($(this).parent().attr('id')!='0' && $(this).attr('class')!='unmovable') total+=1;
+			});
+			$('#r').remove();
+			
+			if(total>0)
+			{
+				var string="<span id='r'> ( Total: <strong>79</strong> | Attempted: <strong>";
+				string+=total+"</strong> | Result: <strong>"+ parseInt(total-wrong)+"</strong> out of <strong>";
+				string+=total + "</strong> | <strong>";
+				string+=parseInt((total-wrong)*100/total);
+				string+="%</strong>)</span>";
+				$(this).after(string);
+			}
+			return false;
+		});
+</script>
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-4142584-2");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+</body>
+</html>

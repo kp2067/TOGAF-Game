@@ -1,0 +1,281 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<title>TOGAF Game</title>
+<style>
+body {
+	font-family: "Helvetica Neue", HelveticaNeue, Helvetica, sans-serif;
+	font-size:90%;
+	background: #D5F7B3;
+}
+a:link {text-decoration:none;color:#0000FF;}
+a:active {text-decoration:none;color:#0000FF;}
+a:visited {text-decoration:none;color:#0000FF;}
+a:hover {text-decoration:underline;color:#0000FF;}
+li {list-style-type:none; border:solid 1px gray;margin:3px 4px 4px -10px;padding:4px; font-size:11px;cursor:move; background:#E7E7E7;}
+li:hover { background:#FFF; }
+ul {padding-left:1em;margin-left:0em;}
+li span {font-weight:bold;font-size:105%;}
+.unmovable {list-style-type:none;font-size:1px;padding:0px;margin:0px;border:none;}
+div {
+	float:left;
+	background: #DCDCDC;
+	margin-right:5px;
+	width:130px;
+	border:1px solid #333;
+	margin-bottom:20px;
+}
+.containerTitle { 
+display:block;
+font-size:16px;
+font-weight:bold;
+padding:7px 5px;
+text-align:center;
+}
+#mixed {
+	background: #CCC;
+	width:170px;
+	margin-right:30px;
+}
+small { 
+background:wheat none repeat scroll 0 0;
+border:1px solid gray;
+display:block;
+font-size:13px;
+margin:7px 0;
+padding:6px;
+}
+#newVersion
+{
+	background:lightGreen none repeat scroll 0 0;
+	border:1px solid green;
+	color:green;
+	display:block;
+	font-weight:bold;
+	margin-bottom:7px;
+	margin-top:-14px;
+	padding:8px 0;
+	text-align:center;
+	width:100%;
+}
+#hide {
+border-right:1px dotted;
+display:block;
+float:left;
+font-size:14px;
+height:19px;
+margin-right:7px;
+padding-right:5px;
+padding-top:0;
+}
+h1 { font-size:20px;
+margin-bottom:-2px; }
+h1 span {
+	font-size:10px;
+}
+</style>
+<script type="text/javascript" src="js/jquery-1.2.1.js"></script>
+<script type="text/javascript" src="js/ui.sortable.js"></script>
+<script type="text/javascript" src="js/jquery.ui.touch-punch.min.js"></script>
+</head>
+<body>
+<h1 align="center">&nbsp;&nbsp;TOGAF 9.2 Game - Objectives <sup style="font-size:8px;"> v1.0</sup><br /><span>( Based on Rita's Process Game by aamirafridi.com at https://pmpritagame.github.io/ , updated by Khoa Pham )</span></h1>
+<h1 align="center"><a href="index-objectives.htm">Objectives</a> | <a href="indexP-F.htm">Preliminary to F</a> | <a href="indexE-R.htm">E to Requirement Management</a></h1>
+<hr />
+<small><a id="hide" href="#">Hide</a><strong>How to play?</strong> Just drag any item from 'mixed' list and drop it just under its appropriate heading. After you finish, go and check ur result.
+</small>
+&raquo; <a href="index-objectives.htm" id="new">Start new game</a> &raquo;
+<a href="#" id="shu">Shuffle the 'Mixed' list</a> &raquo; 
+<a href="#" id="result">Show results</a>
+<hr />
+<ul id="masterList">
+		<div id="mixed">
+			<span class="containerTitle">Mixed</span>
+			<ul id="0">
+
+				<li id="1" value="101">Determine the Architecture Capability desired by the organization</li>
+				<li id="1" value="102">Review the organizational context for conducting Enterprise Architecture</li>
+				<li id="1" value="103">Identify and scope the elements of the enterprise organizations affected by the Architecture Capability</li>
+				<li id="1" value="104">Identify the established frameworks, methods, and processes that intersect with the Architecture Capability</li>
+				<li id="1" value="105">Establish Capability Maturity target</li>
+				<li id="1" value="106">Establish the Architecture Capability</li>
+				<li id="1" value="107">Define and establish the Organizational Model for Enterprise Architecture</li>
+				<li id="1" value="108">Define and establish the detailed process and resources for Architecture Governance</li>
+				<li id="1" value="109">Select and implement tools that support the Architecture Capability</li>
+				<li id="1" value="110">Define the Architecture Principles</li>
+
+
+				<li id="2" value="201">Develop a high-level aspirational vision of the capabilities and business value to be delivered as a result of the proposed Enterprise Architecture</li>
+				<li id="2" value="202">Obtain approval for a Statement of Architecture Work that defines a program of works to develop and deploy the architecture outlined in the Architecture Vision</li>
+
+				<li id="3" value="301">Develop the Target Architecture that describes how the enterprise needs to operate to achieve the business goals, and respond to the strategic drivers set out in the Architecture Vision, in a way that addresses the Statement of Architecture Work and stakeholder concerns</li>
+				<li id="3" value="302">Identify candidate Architecture Roadmap components based upon gaps between the Baseline and Target Business Architectures</li>
+
+				<li id="4" value="401">Generate the initial complete version of the Architecture Roadmap, based upon the gap analysis and candidate Architecture Roadmap components from Phases B, C, and D</li>
+				<li id="4" value="402">Determine whether an incremental approach is required, and if so identify Transition Architectures that will deliver continuous business value</li>
+				<li id="4" value="403">Define the overall solution building blocks to finalize the Target Architecture based on the Architecture Building Blocks (ABBs)</li>
+
+				<li id="5" value="501">Finalize the Architecture Roadmap and the supporting Implementation and Migration Plan</li>
+				<li id="5" value="502">Ensure that the Implementation and Migration Plan is co-ordinated with the enterprise's approach to managing and implementing change in the enterprise's overall change portfolio</li>
+				<li id="5" value="503">Ensure that the business value and cost of work packages and Transition Architectures is understood by key stakeholders</li>
+
+				<li id="6" value="601">Ensure conformance with the Target Architecture by implementation projects</li>
+				<li id="6" value="602">Perform appropriate Architecture Governance functions for the solution and any implementation-driven architecture Change Requests</li>
+
+				<li id="7" value="701">Ensure that the architecture lifecycle is maintained</li>
+				<li id="7" value="702">Ensure that the Architecture Governance Framework is executed</li>
+				<li id="7" value="703">Ensure that the Enterprise Architecture Capability meets current requirements</li>
+
+				<li id="8" value="801">Ensure that the Requirements Management process is sustained and operates for all relevant ADM phases</li>
+				<li id="8" value="802">Manage architecture requirements identified during any execution of the ADM cycle or a phase</li>
+				<li id="8" value="802">Ensure that relevant architecture requirements are available for use by each phase as the phase is executed</li>
+
+
+				
+			</ul>
+		</div>
+
+
+		<div class="pane">
+			<span class="containerTitle">Preliminary</span>
+			<ul id="1" class="planning">
+				<li class="unmovable"></li>
+			</ul>
+		</div>
+	
+		<div class="pane">
+			<span class="containerTitle">A - Architecture Vision</span>
+			<ul id="2" class="phaseA">
+				<li class="unmovable"></li>
+			</ul>
+		</div>
+	
+		<div class="pane">
+			<span class="containerTitle">B,C,D: BDAT Architecture</span>
+			<ul id="3" class="phaseBDAT">
+				<li class="unmovable"></li>
+			</ul>
+		</div>	
+	
+		<div class="pane">
+			<span class="containerTitle">E - Opportunities and Solutions</span>
+			<ul id="4" class="planning">
+				<li class="unmovable"></li>
+			</ul>
+		</div>
+	
+		<div class="pane">
+			<span class="containerTitle">F - Migration Planning</span>
+			<ul id="5" class="phaseA">
+				<li class="unmovable"></li>
+			</ul>
+		</div>
+	
+		<div class="pane">
+			<span class="containerTitle">G - Implementation Governance</span>
+			<ul id="6" class="phaseBDAT">
+				<li class="unmovable"></li>
+			</ul>
+		</div>	
+	
+		<div style="width:230px" class="pane">
+			<span class="containerTitle">H - Architecture Change Management</span>
+			<ul id="7">
+				<li class="unmovable"></li>
+			</ul>
+		</div>
+	
+		<div class="pane">
+			<span class="containerTitle">ADM Requirement Management</span>
+			<ul id="8">
+				<li class="unmovable"></li>
+			</ul>
+		</div>
+	</li>
+</ul>
+
+<script type="text/javascript">
+	//Shuffle the list
+	$('#0').shuffle();
+	$('#shu').click(function(){ 
+		$('#0').shuffle();
+		$("#masterList").sortable({ items: "li", handle:'.containerTitle', opacity: 0.6, helper: 'clone', forcePlaceholderSize: true,forceHelperSize: true});
+		return false;
+	});
+
+	
+	$('#new').click(function(){
+		if(!confirm('Are you sure you want to start a new game?')) return false;
+		var list='';
+		$('.pane').each(function(){
+			list+=$(this).find('ul').html();
+			$(this).find('ul').html("<li class='unmovable'></li>");
+		});
+		$('#0').append(list).shuffle();
+		$('#0').find('.correct').each(function(){
+			$(this).parent().css('background','#E7E7E7');
+			$(this).remove();
+		});
+		$('#r').remove();
+		$("#masterList").sortable({ items: "li", handle:'.containerTitle', opacity: 0.6, helper: 'clone', forcePlaceholderSize: true,forceHelperSize: true});
+		return false;
+	});
+	
+	//Make all <li> items in the list sortable using the jQuery UI Sortables code
+	$("#masterList").sortable({ items: "li", handle:'.containerTitle', opacity: 0.6, helper: 'clone', forcePlaceholderSize: true,forceHelperSize: true});
+	$(".containerTitle").mousedown(function(){ alert('You cannot move main heading!'); });
+	$('#hide,#hide1').click(function(){ $(this).parent().slideUp('slow');return false; });
+	
+	$('#result').click(
+		function()
+		{
+			if($('#0').find('li').length==79)
+			{
+				alert('No results found.');
+				return false;
+				//if (!confirm('Are you sure you want to check the results\nbefore you complete the game?')) return false;
+			}
+			
+			var wrong=0;
+			var total=0;
+			$("#masterList").find('li').each(function(){
+				//Check the result
+				if($(this).attr('id')!=$(this).parent().attr('id') && $(this).parent().attr('id')!='0' && $(this).attr('class')!='unmovable')
+				{
+					$(this).css("background","#FF7774");
+					wrong+=1;
+					var correctHeading='';
+					var currentId=$(this).attr('id');
+					$("#masterList").find('ul').each(function(){
+						if($(this).attr('id')==currentId)
+							correctHeading=$(this).parent().find('.containerTitle').html();
+					});
+					$(this).find('.correct').remove();
+					$(this).append("<span class='correct' style='display:block;padding-top:3px;margin-top:3px;border-top: 1px dotted #ff0000;'><strong>Should be under:<br> \""+ correctHeading +"\"</strong></span>");
+				}
+				
+				//attmpted
+				if($(this).parent().attr('id')!='0' && $(this).attr('class')!='unmovable') total+=1;
+			});
+			$('#r').remove();
+			
+			if(total>0)
+			{
+				var string="<span id='r'> ( Total: <strong>79</strong> | Attempted: <strong>";
+				string+=total+"</strong> | Result: <strong>"+ parseInt(total-wrong)+"</strong> out of <strong>";
+				string+=total + "</strong> | <strong>";
+				string+=parseInt((total-wrong)*100/total);
+				string+="%</strong>)</span>";
+				$(this).after(string);
+			}
+			return false;
+		});
+</script>
+
+
+
+
+</body>
+</html>
